@@ -57,4 +57,24 @@ pdflatex paper
 
 ## 提交说明
 
-项目以 git 仓库组织（见 `.git/`）。提交历史清晰、分阶段；如需推送到 GitHub/Gitee 等 **public 远程仓库**，请在目标平台新建空仓库后，将远程地址配置到 `origin` 并 `git push -u origin main`（首次推送需本机 git 身份/凭据授权，见提交说明）。
+## 提交说明（GitHub public 仓库）
+
+项目已初始化为 git 仓库（分支 `main`，提交清晰、工作树干净）。推送到 **public** 仓库需你先在 GitHub 完成一次授权（本机当前无已存储的 GitHub 凭据，我无法代你登录）。
+
+**第 1 步：在 GitHub 新建空仓库（公开）**
+- 登录 https://github.com/yihan110
+- New repository → 名称建议 `AI4Math_C2_Paper` → 可见性选 **Public** → 不勾选任何初始化文件 → Create。
+- 复制该仓库地址（HTTPS 或 SSH 均可），形如 `https://github.com/yihan110/AI4Math_C2_Paper.git`。
+
+**第 2 步：配置远程并推送（在桌面项目目录执行）**
+```bash
+cd C:\Users\lucky\Desktop\AI4Math_C2_Paper
+git remote add origin https://github.com/yihan110/AI4Math_C2_Paper.git
+git branch -M main
+git push -u origin main
+```
+首次推送会弹出 GitHub 登录窗口（或提示输入 Personal Access Token），按提示授权一次即可；授权后凭据会由 Git Credential Manager 保存，后续 `git push` 无需再登录。
+
+若推送时被提示需要 PAT：在 GitHub → Settings → Developer settings → Personal access tokens → 生成一个带 `repo` 权限的 token，作为密码粘贴即可。
+
+> 说明：`references.bib`、`.gitignore`、README、AI 日志、AAR、paper.tex、paper.pdf 均已纳入本次提交（commit `66d790d`）。如需 Gitee 国内直连版本，把 `origin` 换成对应 gitee.com 仓库地址即可。
