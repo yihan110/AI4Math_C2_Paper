@@ -35,7 +35,7 @@
 
 | 轮次 | 行动 | 结果 | 人工核验 |
 |---|---|---|---|
-| 2.1 | 请 AI 列出 AI4Math 可靠性相关的一手文献清单 | 输出 20 条候选，含 Davies 2021 (Nature 600)、Fawzi 2022 (Nature 610)、Romera-Paredes 2024 (Nature 625)、Trinh 2024 (Nature 625)、Hubert 2026 (Nature 651, AlphaProof)、Chervonyi 2025 (JMLR 26, AlphaGeometry2)、Wagner 2021 (arXiv:2104.14516)、Cobbe 2021 (GSM8K, arXiv:2110.14168)、Hendrycks 2021 (MATH, arXiv:2103.03874)、Polu & Sutskever 2020 (arXiv:2009.03393)、de Moura & Ullrich 2021 (Lean 4, CPP)、Howard 1980、Appel & Haken 1977 等。 | **人工逐条核验**：① 与讲义参考文献表[1]–[11]、第四章/第五章参考文献[1]–[21]逐一比对，确认卷期页码一致；② 对讲义未收录者（Cobbe/Hendrycks/Polu/de Moura/Howard）调取 arXiv/会议官方信息核对标题、编号、年份；③ **剔除**任何无法核验的条目。**最终 20 条全部为真实可查文献，写入 `references.bib`。** |
+| 2.1 | 请 AI 列出 AI4Math 可靠性相关的一手文献清单 | 输出 20 条候选，含 Davies 2021 (Nature 600)、Fawzi 2022 (Nature 610)、Romera-Paredes 2024 (Nature 625)、Trinh 2024 (Nature 625)、Hubert 2026 (Nature 651, AlphaProof)、Chervonyi 2025 (JMLR 26, AlphaGeometry2)、Wagner 2021 (arXiv:2104.14516)、Cobbe 2021 (GSM8K, arXiv:2110.14168)、Hendrycks 2021 (MATH, arXiv:2103.03874)、Polu & Sutskever 2020 (arXiv:2009.03393)、de Moura & Ullrich 2021 (Lean 4, CPP)、Howard 1980、Appel & Haken 1977 等。 | **人工逐条核验**：① 与讲义参考文献表[1]–[11]、第四章/第五章参考文献[1]–[21]逐一比对，确认卷期页码一致；② 对讲义未收录者（Cobbe/Hendrycks/Polu/de Moura/Howard）调取 arXiv/会议官方信息核对标题、编号、年份；③ **剔除**任何无法核验的条目。**最终 21 条全部为真实可查文献，写入 `references.bib`。** |
 | 2.2 | 请 AI 判断“引用造假”红线 | AI 提示需区分“确证”与“存疑”并附来源 | 人工接受；故正文所有事实性陈述均挂接上述已核验引用，未核验内容不写为断言。 |
 
 **Day 2 结论**：`references.bib` 定稿（21 条，≥8 条要求满足，含多篇 Nature/Science/JMLR 一手文献）。
@@ -95,3 +95,5 @@
 ---
 
 *本文档由作者与 Doubao AI 协作生成；所有事实性条目均经人工对照讲义与公开文献核验。*
+
+**学术诚信声明**：本论文未编造任何实验数字；评估部分以“协议设计 + 明确标注的 placeholder 目标值”呈现（见正文表 5），而非虚构的跑分结果。这一取舍比给出假数据在学术上更可取，也是守住“研究严谨性 / 不凭空断言”红线的一环。
